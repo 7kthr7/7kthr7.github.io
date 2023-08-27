@@ -3695,7 +3695,7 @@ textarea.form-control-lg {
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-size: var(--bs-nav-link-font-size);
   font-weight: var(--bs-nav-link-font-weight);
-  color: var(--bs-nav-link-color);
+  color: #EEEEEE;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -3705,7 +3705,8 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: var(--bs-nav-link-hover-color);
+  color: #051e3f;
+  font-weight: bolder;
 }
 .nav-link.disabled {
   color: var(--bs-nav-link-disabled-color);
@@ -10981,62 +10982,63 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  background-color: #2a395fa3;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: #EEEEEE;
+  border: 1px solid  #EEEEEE;
+  
 }
 #mainNav .navbar-toggler:focus {
   outline: none;
 }
 #mainNav .navbar-brand {
-  color: #000;
+  color: #EEEEEE;
   font-weight: 700;
   padding: 0.9rem 0;
 }
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(#fff, 80%);
+  color: fade(#EEEEEE, 80%);
   outline: none;
-  background-color: transparent;
+  /* background-color: #2a395fa3; */
 }
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
   outline: none;
-  background-color: transparent;
+  background-color: #2a395fa3;
 }
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: transparent;
+    background-color: #2a395fa3;
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
-    padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem 1.5rem 1.25rem;
+    color: #EEEEEE;
   }
   #mainNav .nav-link {
     transition: none;
-    padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem 1.5rem 1.25rem;
+    color: #EEEEEE;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
   }
   #mainNav .nav-link:active {
-    color: #fff;
+    color: #EEEEEE;
   }
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: #2a395fa3;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #000;
+    color: #EEEEEE;
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #000;
+    color: #EEEEEE;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
