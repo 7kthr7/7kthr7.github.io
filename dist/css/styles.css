@@ -9307,7 +9307,7 @@ fieldset:disabled .btn {
 
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #c8d5d6 !important;
 }
 
 .bg-dark {
@@ -9317,7 +9317,7 @@ fieldset:disabled .btn {
 
 .bg-black {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+  /* background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important; */
 }
 
 .bg-white {
@@ -13052,87 +13052,179 @@ gap: 150px;
 
 @media (max-width: 456px) {
 
- .masthead {
+ .masthead h1 {
   width: fit-content;
+  font-size: 6rem;
+ }
+
+
+  /* .masthead-image{
+    position: absolute;
+  } */
+}
+
+@media (max-width: 650px) {
+
+ .masthead h1 {
+  width: 100%;
+  font-size: 4rem;
+  text-align: center;
+  /* z-index: 1; */
  }
 
 
   .masthead-image {
-    display: none;
-  }
+position: absolute; 
+width: 100%;
+height: 100%;
+/* z-index: 2; */
+ }
+ .masthead-image img{
+  opacity: 20%;
+
+ }
 }
-
-
-/* @media (min-width: 768px) {
-
-  .masthead h1,
-  .masthead .h1 {
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .masthead {
-    /* height: 100vh; */
-    /* padding: 0;
-  } */
-
-  /* .masthead h1,
-  .masthead .h1 {
-    font-size: 8.5rem;
-    line-height: 8.5rem;
-  }
-
-  .masthead h2,
-  .masthead .h2 {
-    /* max-width: 30rem; */
-    /* font-size: 1.25rem; */
 
 
 .about-container {
-  display: flex;
-  flex: 1 20px;
-  background: #C8D5D6;
-  gap: 30px;
-  height: 100%;
+position: relative;
+width: 100%;
+display: flex;
+background-color: #C8D5D6;
+gap: 30px;
+max-height: 500px;
+position: relative;
+width: 100%;
+height: 80%;
+min-height: 35rem;
+background: #C8D5D6;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-size: cover;
 }
 
 .about-image{
   flex: 1;
-  width: 80%;
-  height: 80%;
-  padding: 3rem;
+  width: 100%;
 
+  padding: 2rem;
+  border: 5px solid var(--bs-pink);
+  
 }
 
 .about-image img{
- width: 80%;
- height: 80%;
- /* height: 500px; */
- object-fit: cover;
+  width: 100%;
+  height: 100%;
+  /* height: 500px; */
+  object-fit: cover;
 }
 
 
 .about-me {
   flex: 2;
   width: 100%;
-  height: fit-content;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   border: 1px solid red;
-  align-self: center;
-  padding: 3rem;
+  justify-content: space-between;
+  padding-top: 3rem;
+  text-align: end;
+
+}
+.about-icons{
+  align-content: end;
+  border: 2px solid orangered;
+}
+
+.about-me h1{
+  font-family: 'Merriweather', serif;  
+  font-weight: bolder;
+  color: #0e525e;
+  font-size: 6rem;
+  text-align: center;
+
+}
+
+.about-me p {
+  text-align: center;
 }
 
 
+
+@media (max-width: 830px) {
+
+.about-me h1{
+  font-size: 3.5rem;
+}
+ .about-container{
+  gap: 0px;
+ }
+ 
+   .about-icons {
+     display: none;
+   }
+   .about-image{
+    padding: 0px;
+    width: 100%;
+   }
+   
+ }
+ @media (max-width: 450px) {
+
+  .about-container, .about-me{
+    width: 100%;
+  }
+  .about-me h1{
+    font-size: 3.5rem;
+  }
+   .about-me{
+    width: 100%;
+   }
+   
+     .about-icons {
+       display: none;
+     }
+     .about-image {
+      display: none;
+     }
+   }
+   
+
 .projects-section {
   padding: 6rem 0;
-  background-color: #C8D5D6;
+  background-color: #c8d5d6;
 }
 
 .projects-section .featured-text {
   padding: 2rem;
 }
+
+#my-project-title{
+  font-family: 'Merriweather', serif;  
+  font-weight: bolder;
+  color: #0e525e;
+  font-size: 4rem;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+
+.img-fluid{
+  width: 100%;
+  cursor: pointer;
+}
+
+.img-fluid:hover{
+  opacity: 80%;
+  background-image: url('assets/img/spacebnb.gif');
+}
+
+#buttons{
+  position: absolute;
+}
+
+
 
 @media (min-width: 992px) {
   .projects-section .featured-text {
