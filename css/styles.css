@@ -9244,14 +9244,14 @@ fieldset:disabled .btn {
   color: #6c757d !important;
 }
 
-.text-black-50 {
-  --bs-text-opacity: 1;
+.text-black-50 p{
+  text-align: start;
   color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .text-white-50 {
   --bs-text-opacity: 1;
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--bs-list-group-action-active-color) !important;
 }
 
 .text-reset {
@@ -9316,13 +9316,13 @@ fieldset:disabled .btn {
 }
 
 .bg-black {
-  --bs-bg-opacity: 1;
-  /* background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important; */
+  --bs-bg-opacity: 5;
+  /* background-color: rgb(131,159,155) ; */
 }
 
 .bg-white {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+  /* background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important; */
 }
 
 .bg-body {
@@ -12918,6 +12918,7 @@ body {
   background-attachment: scroll;
   background-size: cover;
   max-height: 921px;
+  border-bottom: .5px solid lightcyan;
 
 }
 
@@ -12938,10 +12939,11 @@ body {
  text-align: center;
 margin-right: 0px;
 margin-left: 0px;
+
 display: flex;
 flex-direction: column;
 background: #C8D5D6;
-justify-content: space-between;
+justify-content: space-around;
 gap: 150px;
  
 }
@@ -12986,16 +12988,18 @@ gap: 150px;
   object-fit: cover;
 }
 
-.masthead-text, .masthead-image, .masthead-icon {
+
+
+.masthead-text, .masthead-image, .masthead-icons, .about-image, .about-image {
   opacity: 0;
   position: relative;
 }
 
-.masthead-text, .masthead-icons {
+.masthead-text, .masthead-icons, .about-image {
   left: -100%;
 }
 
-.masthead-image {
+.masthead-image, .about-me {
   right: -100%;
 }
 
@@ -13023,11 +13027,11 @@ gap: 150px;
 }
 
 
-.masthead-text, .masthead-icons {
+.masthead-text, .masthead-icons, .about-image {
   animation: slideInLeft 1.5s forwards;
 }
 
-.masthead-image {
+.masthead-image, .about-me {
   animation: slideInRight 1.5s forwards;
 }
 
@@ -13037,18 +13041,21 @@ gap: 150px;
   .masthead .h1 {
     font-size: 8rem;
     line-height: 8rem;
-    border: 4px solid red;
+    /* border: 4px solid red; */
   }
   .masthead-container {
     max-height: 921;
-    border: #060644 8px solid;
   }
 
-  .masthead-icons {
-    border: 2px solid pink;
-  }
+  /* .masthead-icons {
+  } */
 }
 
+/* @media (max-width: 1150px) {
+  .masthead-icons{
+    align-self: flex-end;
+  }
+} */
 
 @media (max-width: 456px) {
 
@@ -13092,24 +13099,26 @@ width: 100%;
 display: flex;
 background-color: #C8D5D6;
 gap: 30px;
-max-height: 500px;
+max-height: 800px;
+min-height: 500px;
 position: relative;
 width: 100%;
-height: 80%;
+height: 100%;
 min-height: 35rem;
 background: #C8D5D6;
 background-position: center;
 background-repeat: no-repeat;
 background-attachment: scroll;
 background-size: cover;
+border-bottom: .5px solid lightcyan;
+
 }
 
 .about-image{
   flex: 1;
   width: 100%;
 
-  padding: 2rem;
-  border: 5px solid var(--bs-pink);
+  /* padding: 2rem; */
   
 }
 
@@ -13126,15 +13135,16 @@ background-size: cover;
   width: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   justify-content: space-between;
   padding-top: 3rem;
   text-align: end;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 4px;
 
 }
 .about-icons{
   align-content: end;
-  border: 2px solid orangered;
 }
 
 .about-me h1{
@@ -13147,7 +13157,7 @@ background-size: cover;
 }
 
 .about-me p {
-  text-align: center;
+  text-align: start;
 }
 
 
@@ -13170,7 +13180,7 @@ background-size: cover;
    }
    
  }
- @media (max-width: 450px) {
+ @media (max-width: 600px) {
 
   .about-container, .about-me{
     width: 100%;
@@ -13192,7 +13202,7 @@ background-size: cover;
    
 
 .projects-section {
-  padding: 6rem 0;
+  padding: 5rem 0;
   background-color: #c8d5d6;
 }
 
@@ -13209,6 +13219,9 @@ background-size: cover;
   padding-bottom: 20px;
 }
 
+#my-project-text h4{
+  color: #141619;
+}
 
 .img-fluid{
   width: 100%;
@@ -13234,13 +13247,13 @@ background-size: cover;
 }
 
 .projects-section .project-text {
-  padding: 3rem;
+  padding: 1rem;
   font-size: 90%;
 }
 
 @media (min-width: 992px) {
   .projects-section .project-text {
-    padding: 5rem;
+    padding: 1rem;
   }
 }
 
